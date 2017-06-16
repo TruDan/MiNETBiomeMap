@@ -3,7 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiNET.Server", "MiNET.Server\MiNET.Server.csproj", "{F215C323-AA4F-4841-ADA5-C84E27E96EA4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0BE255CD-0171-4D85-9CB6-3C3954694ECC} = {0BE255CD-0171-4D85-9CB6-3C3954694ECC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiNETBiomeMap", "MiNETBiomeMap\MiNETBiomeMap.csproj", "{0BE255CD-0171-4D85-9CB6-3C3954694ECC}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F215C323-AA4F-4841-ADA5-C84E27E96EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F215C323-AA4F-4841-ADA5-C84E27E96EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F215C323-AA4F-4841-ADA5-C84E27E96EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F215C323-AA4F-4841-ADA5-C84E27E96EA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE255CD-0171-4D85-9CB6-3C3954694ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE255CD-0171-4D85-9CB6-3C3954694ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE255CD-0171-4D85-9CB6-3C3954694ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE255CD-0171-4D85-9CB6-3C3954694ECC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
