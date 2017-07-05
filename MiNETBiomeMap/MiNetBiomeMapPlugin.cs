@@ -18,6 +18,7 @@ using Timer = System.Threading.Timer;
 
 namespace MiNETBiomeMap
 {
+    [Plugin(PluginName = "MiNETBiomeMap")]
     public class MiNetBiomeMapPlugin : Plugin
     {
         private BiomeMapForm _biomeMapForm;

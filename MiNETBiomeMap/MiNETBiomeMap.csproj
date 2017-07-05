@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="aiv-fast2d, Version=1.0.6336.29264, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aiv.Fast2D.0.13.0\lib\net40\aiv-fast2d.dll</HintPath>
+    </Reference>
     <Reference Include="AStarNavigator, Version=1.0.63.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AStarNavigator.1.0.63\lib\net35\AStarNavigator.dll</HintPath>
     </Reference>
@@ -53,10 +57,14 @@
       <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.1.0.0\lib\net45\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
     </Reference>
     <Reference Include="MiNET, Version=1.0.1445.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MiNET.1.0.1445\lib\net461\MiNET.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\MiNET.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.2.0.0\lib\net20\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="SharpAvi, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpAvi.2.1.0\lib\net45\SharpAvi.dll</HintPath>
@@ -91,6 +99,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

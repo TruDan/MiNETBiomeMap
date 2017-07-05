@@ -1,0 +1,72 @@
+﻿<Window
+    x:Class="DevTools.WPF.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    Title="{Binding Title}"
+    Width="525"
+    Height="350"
+    md:DialogServiceViews.IsRegistered="True"
+    syncfusion:SkinStorage.VisualStyle="Metro"
+    BorderBrush="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+    BorderThickness="1,5,1,1"
+    WindowState="Normal"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <Window.Resources>
+        <!--  Insert here your Data Templates  -->
+        <DataTemplate x:Key="SampleTemplate">
+            <StackPanel />
+        </DataTemplate>
+
+    </Window.Resources>
+    <Window.InputBindings>
+        <!--  Example of Keyboard shortcuts  -->
+        <KeyBinding
+            Key="S"
+            Command="{Binding SaveCmd}"
+            Modifiers="Ctrl" />
+        <KeyBinding Command="{Binding SaveAsCmd}" Gesture="Ctrl+Shift+S" />
+        <KeyBinding Command="{Binding OpenCmd}" Gesture="Ctrl+O" />
+        <KeyBinding Command="{Binding NewCmd}" Gesture="Ctrl+N" />
+        <KeyBinding Command="{Binding ExitCmd}" Gesture="Alt+F4" />
+    </Window.InputBindings>
+
+    <DockPanel>
+        <!--  File Menu  -->
+
+        <StackPanel>
+            <!--  Place here your content  -->
+        </StackPanel>
+        <syncfusion:Ribbon
+            x:Name="ribbon"
+            VerticalAlignment="Top"
+            Style="{DynamicResource RibbonStyle1}">
+            <syncfusion:Ribbon.ApplicationMenu>
+                <syncfusion:ApplicationMenu />
+            </syncfusion:Ribbon.ApplicationMenu>
+            <syncfusion:Ribbon.QuickAccessToolBar>
+                <syncfusion:QuickAccessToolBar syncfusion:WindowChrome.IsHitTestVisibleInChrome="True" />
+            </syncfusion:Ribbon.QuickAccessToolBar>
+            <syncfusion:RibbonTab
+                MinWidth="23"
+                Background="Transparent"
+                Caption="New RibbonTab1"
+                FocusVisualStyle="{x:Null}"
+                Focusable="False">
+                <syncfusion:RibbonBar Focusable="False" Header="New RibbonBar1" />
+            </syncfusion:RibbonTab>
+            <syncfusion:RibbonTab
+                MinWidth="23"
+                Background="Transparent"
+                Caption="New RibbonTab2"
+                FocusVisualStyle="{x:Null}"
+                Focusable="False" />
+        </syncfusion:Ribbon>
+    </DockPanel>
+</Window>

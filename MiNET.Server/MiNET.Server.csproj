@@ -24,6 +24,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -62,7 +63,8 @@
       <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.1.0.0\lib\net45\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
     </Reference>
     <Reference Include="MiNET, Version=1.0.1445.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MiNET.1.0.1445\lib\net461\MiNET.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\MiNET.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
